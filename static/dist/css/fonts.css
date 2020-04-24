@@ -1,0 +1,189 @@
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikThin.otf');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikThinItalic.otf');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikExtralight.otf');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikExtralightItalic.otf');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikLight.otf');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikLightItalic.otf');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikRegular.otf');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikRegularItalic.otf');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikMedium.otf');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikMediumItalic.otf');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikSemibold.otf');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikSemiboldItalic.otf');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikBold.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikBoldItalic.otf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikBlack.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikBlackItalic.otf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikSuper.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: Graphik;
+	src: url('../fonts/GraphikSuperItalic.otf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Black.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-BlackItalic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-BoldItalic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Italic.ttf');
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Light.ttf');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-LightItalic.ttf');
+	font-weight: 200;
+	font-style: italic;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Medium.ttf');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-MediumItalic.ttf');
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Thin.ttf');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-ThinItalic.ttf');
+	font-weight: 100;
+	font-style: italic;
+}
