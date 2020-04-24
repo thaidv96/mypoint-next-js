@@ -16,14 +16,204 @@ class IndexPage extends Component {
 
   state = {};
 
-  componentDidMount = () => {};
+  componentDidMount = () => {
+    $("#login").click(function(){
+	    $("#myLogin").modal();
+	  });
+  	$('#openMyMenu').click(function(event){
+  		event.preventDefault();
+  		$('#main-menu').addClass('open');
+  		$('#closeMenu').addClass('open');
+  	});
+  	$('#closeMenu').click(function(event) {
+  		$('#main-menu').removeClass('open');
+  		$(this).removeClass('open');
+  	});
+  	$('#main-menu ul li').find('ul').each(function(index, el) {
+  		$(this).parent().append('<span class="far fa-angle-down show-submenu-mb"></span>');
+  	
+  	});
+  	$('.show-submenu-mb').click(function(event) {
+  		$(this).prev('ul').toggleClass('open');
+    });
+    $('a[data-dr="dropdown"]').click(function(event) {
+      $(this).next().toggle('slow');
+    });
+    $('.home-banner').owlCarousel({
+      items: 1,
+        loop:true,
+        margin:0,
+    });
+    $('.custom_dropdown').click(function () {
+          $(this).attr('tabindex', 1).focus();
+          $(this).toggleClass('active');
+          $(this).find('.dropdown-menu').slideToggle(300);
+    });
+    $('.custom_dropdown').focusout(function () {
+        $(this).removeClass('active');
+        $(this).find('.dropdown-menu').slideUp(300);
+    });
+    $('.custom_dropdown .dropdown-menu li').click(function () {
+        $(this).parents('.custom_dropdown').children('.select').find('div').html($(this).html());
+        $(this).parents('.custom_dropdown').find('input').attr('value', $(this).attr('data-value'));
+    });
+    $('.change_step').each(function(index, el) {
+    	$(this).click(function(event) {
+    		event.preventDefault();
+    		var step = $(this).attr('data-step');
+    		if (step != '') {
+    			$('.step').removeClass('active');
+    			$(step).addClass('active');
+    			$('.infor-step .title .lg-rs-title').removeClass('active');
+    			$('.infor-step .group-bar .bar').removeClass('active');
+    			$('.infor-step .title .lg-rs-title[data-step="'+step+'"]').addClass('active');
+    			$('.infor-step .group-bar .bar[data-step="'+step+'"]').addClass('active');
+    		}
+    		
+    	});
+    });
+    $('.bar_the .bar_thuc').each(function(index, el) {
+    	var current = $(this).attr('data-value');
+    	var max = $(this).attr('data-max');
+    	var phantram = Math.round((current/max)*100);
+    	$(this).css('width', phantram+'%');
+    });
+    
+    $('.button_edit.edit').click(function(event) {
+    	event.preventDefault();
+    	$('form input[type=text]').attr('readonly', false);
+    	$('form input[type=date]').attr('readonly', false);
+    	$('form input[type=password]').attr('readonly', false);
+    	$('form select').attr('disabled', false);
+
+    	$('form input[type=text]').parent().removeClass('disable');
+    	$('form input[type=date]').parent().removeClass('disable');
+    	$('form input[type=password]').parent().removeClass('disable');
+    	$('form select').parent().removeClass('disable');
+
+    	$('.button_edit').css('display', 'none');
+    	$('.button_edit_hd').css('display', 'inline-block');
+    });
+    $('.button_edit_hd').click(function(event) {
+    	event.preventDefault();
+    	$('form input[type=text]').attr('readonly', true);
+    	$('form input[type=date]').attr('readonly', true);
+    	$('form input[type=password]').attr('readonly', true);
+    	$('form select').attr('disabled', true);
+
+    	$('form input[type=text]').parent().addClass('disable');
+    	$('form input[type=date]').parent().addClass('disable');
+    	$('form input[type=password]').parent().addClass('disable');
+    	$('form select').parent().addClass('disable');
+
+    	$('.button_edit').css('display', 'inline-block');
+    	$(this).css('display', 'none');
+    });
+    $('.slides-partner').owlCarousel({
+      loop:true,
+        margin:30,
+        dots: false,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:2,
+            },
+            600:{
+                items:3,
+            },
+            768:{
+                items:4,
+            },
+            1024:{
+                items:6,
+            }
+        }
+    });
+    $('.slides-hot-deals').owlCarousel({
+      loop:true,
+        margin:30,
+        dots: false,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:2,
+            },
+            768:{
+                items:2,
+            },
+            1024:{
+                items:3,
+            }
+        }
+    });
+    $('.slides-news').owlCarousel({
+      loop:true,
+        margin:30,
+        dots: false,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:2,
+            },
+            768:{
+                items:2,
+            },
+            1024:{
+                items:3,
+            }
+        }
+    });
+    $('.slides-comments').owlCarousel({
+      loop:true,
+        margin:30,
+        dots: true,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:2,
+            },
+            768:{
+                items:2,
+            },
+            1024:{
+                items:3,
+            }
+        }
+    });
+    $('.slides-img-store').owlCarousel({
+      loop:true,
+        margin:30,
+        dots: false,
+        nav: true,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:2,
+            },
+            768:{
+                items:2,
+            },
+            1024:{
+                items:3,
+            }
+        }
+    });
+  };
 
   render = () => (
     <PageWrapper title="PAGE TITLE">
-      {/* <div id="loader">
-        <span className="fas fa-spinner xoay icon"></span>
-      </div> */}
-
       <div id="closeMenu"></div>
       <header id="main-header">
         <div className="container-fluid">
@@ -117,16 +307,6 @@ class IndexPage extends Component {
                   Đăng nhập
                 </a>
               </div>
-              {/* <!-- <div className="group_user">
-                      <a className="" className="btn-user" data-dr="dropdown">
-                        <span className="name">Linh</span> <span className="avatar"><img src="/static/images/avatar.svg" alt=""/></span>
-					    </a>
-                        <div className="dr-user">
-                          <a className="dr-item" href="#">Tài khoản</a>
-                          <a className="dr-item" href="#">Tín dụng</a>
-                          <a className="dr-item" href="#">Đăng xuất</a>
-                        </div>
-					</div> --> */}
             </div>
             <div className="d-xl-none col-lg-1 col-md-1 col-sm-1 col-2 text-right">
               <a href="#" id="openMyMenu">
@@ -260,10 +440,10 @@ class IndexPage extends Component {
                   <div className="group">
                     <a href="#">
                       <img src="/static/images/icon-starbuck.svg" alt="" />
-                      &nbsp&nbsp Starbuck
+                      <div>&nbsp;</div><div>&nbsp;</div> Starbuck
                     </a>
-                    <a href="#">
-                      200 &nbsp&nbsp
+                    <a href="#" >
+                      200 <div>&nbsp;</div><div>&nbsp;</div>
                       <img src="/static/images/icon-point.png" alt="" />
                     </a>
                   </div>
@@ -283,10 +463,10 @@ class IndexPage extends Component {
                   <div className="group">
                     <a href="#">
                       <img src="/static/images/icon-starbuck.svg" alt="" />{" "}
-                      &nbsp&nbsp Starbuck
+                      <div>&nbsp;</div><div>&nbsp;</div> Starbuck
                     </a>
                     <a href="#">
-                      200 &nbsp&nbsp
+                      200 <div>&nbsp;</div><div>&nbsp;</div>
                       <img src="/static/images/icon-point.png" alt="" />
                     </a>
                   </div>
@@ -306,10 +486,10 @@ class IndexPage extends Component {
                   <div className="group">
                     <a href="#">
                       <img src="/static/images/icon-starbuck.svg" alt="" />
-                      &nbsp&nbsp Starbuck
+                      <div>&nbsp;</div><div>&nbsp;</div> Starbuck
                     </a>
                     <a href="#">
-                      200 &nbsp&nbsp
+                      200 <div>&nbsp;</div><div>&nbsp;</div>
                       <img src="/static/images/icon-point.png" alt="" />
                     </a>
                   </div>
