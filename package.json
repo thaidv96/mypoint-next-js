@@ -69,7 +69,7 @@
     "isomorphic-fetch": "2.2.1",
     "jquery": "3.4.1",
     "lru-cache": "4.1.3",
-    "next": "6.1.2",
+    "next": "11.1.3",
     "next-connect-redux": "0.1.5",
     "next-page-transitions": "1.0.0-alpha.3",
     "owl.carousel": "2.3.4",
