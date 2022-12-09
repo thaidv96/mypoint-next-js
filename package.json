@@ -65,7 +65,7 @@
     "d3plus-react": "0.5.0",
     "date-fns": "1.29.0",
     "expose-loader": "^0.7.5",
-    "express": "4.16.3",
+    "express": "4.17.3",
     "isomorphic-fetch": "2.2.1",
     "jquery": "3.4.1",
     "lru-cache": "4.1.3",
